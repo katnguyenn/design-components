@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-const primaryBlue = "#2A4793"
+const primaryBlue = "#2A4793";
+const primaryOrange = "#F08B2E";
 
 const Button = styled.button `
     padding: 12px 24px;
@@ -11,7 +12,7 @@ const Button = styled.button `
     font-family: "Roboto Mono", monospace;
 `
 
-const PrimaryButton = styled(Button) `
+export const PrimaryButton = styled(Button) `
     background-color: ${primaryBlue};
     border: none;
     color: white;
@@ -19,6 +20,13 @@ const PrimaryButton = styled(Button) `
 
 `;
 
+export const SecondaryButton = styled(Button) `
+    background-color: white;
+    border: 2px solid ${primaryOrange};
+    color: ${primaryOrange};
+`
 
 
-export default PrimaryButton;
+
+
+
