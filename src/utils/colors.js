@@ -13,8 +13,9 @@ export const orange = {
 };
 
 export const neutral = {
-    100: "#F2F2F2",
-    200: "#CCCCCC",
-    300: "#A5A5A5",
+    100: "#FFFFFF",
+    200: "#F2F2F2",
+    300: "#CCCCCC",
+    400: "#A5A5A5",
     
 };
