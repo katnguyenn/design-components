@@ -8,12 +8,10 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
     "@storybook/addon-actions",
-    "@storybook/addon-docs", 
-    {
-      name: "@storybook/addon-docs",
-      options: {
-        configureJSX: true
-      }
-    }
+    "@storybook/addon-docs",
+    "@storybook/addon-backgrounds/register",
+    "@storybook/addon-contexts/register",
+    
+    
   ]
 }
