@@ -8,12 +8,32 @@ const BUTTON_MODIFERS = {
         padding: 8px;
     `,
     large: () => `
-    font-size: ${typeScale.h5};
-    padding: 16px 24px;
+         font-size: ${typeScale.h5};
+        padding: 16px 24px;
+    `,
+
+    warning: () => `
+        background-color: ${defaultTheme.status.warningColor};
+        color: ${defaultTheme.textColorInverted}
+
+        &:hover, &:focus {
+            background-color: ${defaultTheme.status.warningColorHover};
+            outline: 3px solid ${defaultTheme.status.warningColorHover};
+        }
+
+        &:active {
+            background-color: ${defaultTheme.status.warningColorActive};
+        }
+
+    `,
+    secondaryButtonWarning: () => `
+        background: none;
+        border: 2px solid ${defaultTheme.status.warningColor};
+        color: ${defaultTheme.status.warningColor};
     `
 }
 
-const Button = styled.button `
+const Button = styled.button`
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
@@ -36,7 +56,7 @@ const Button = styled.button `
 
 `
 
-export const PrimaryButton = styled(Button) `
+export const PrimaryButton = styled(Button)`
     background-color: ${defaultTheme.primaryColor};
     border: none;
     color: white;
@@ -56,7 +76,7 @@ export const PrimaryButton = styled(Button) `
 
 `;
 
-export const SecondaryButton = styled(Button) `
+export const SecondaryButton = styled(Button)`
     background-color: white;
     border: 2px solid ${defaultTheme.secondaryColor};
     color: ${defaultTheme.secondaryColor};
