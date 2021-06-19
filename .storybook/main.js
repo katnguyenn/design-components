@@ -11,6 +11,7 @@ module.exports = {
     "@storybook/addon-docs",
     "@storybook/addon-backgrounds/register",
     "@storybook/addon-contexts/register",
+    "@storybook/addon-knobs"
     
     
   ]
