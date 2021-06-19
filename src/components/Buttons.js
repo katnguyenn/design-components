@@ -12,6 +12,16 @@ const Button = styled.button `
     font-family: "Roboto Mono", monospace;
     transition: background-color 0.2 linear, color 0.2s linear;
 
+    &:focus {
+        outline: 3px solid ${defaultTheme.primaryColorHover};
+        outline-offset: 2px;
+    }
+
+    &:active {
+        background-color: ${defaultTheme.primaryColorActive};
+        border-color: ${defaultTheme.primaryColorActive};
+        color: ${defaultTheme.textColorOnPrimary}
+    }
     
 
 `
@@ -26,6 +36,11 @@ export const PrimaryButton = styled(Button) `
         color: ${defaultTheme.textColorOnPrimary};
     }
    
+    &:disabled {
+        background-color: ${defaultTheme.disabled};
+        color: ${defaultTheme.textonDisabled};
+        cursor: not-allowed;
+    }
 
 `;
 
@@ -37,6 +52,13 @@ export const SecondaryButton = styled(Button) `
     &:hover {
         background-color: ${defaultTheme.secondaryColorHover};
         color: ${defaultTheme.textColorOnPrimary};
+    }
+
+     &:disabled {
+        background: none;
+        color: ${defaultTheme.disabled};
+        border-color: ${defaultTheme.disabled};
+        cursor: not-allowed;
     }
 `
 
