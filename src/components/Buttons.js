@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { defaultTheme, typeScale } from "../utils";
 import { applyStyleModifiers } from "styled-components-modifiers";
 
-const BUTTON_MODIFERS = {
+const BUTTON_MODIFIERS = {
     small: () => `
         font-size: ${typeScale.helperText};
         padding: 8px;
@@ -30,7 +30,22 @@ const BUTTON_MODIFERS = {
         background: none;
         border: 2px solid ${defaultTheme.status.warningColor};
         color: ${defaultTheme.status.warningColor};
-    `
+    `,
+    
+    success: () => `
+        background-color: ${defaultTheme.status.successColor};
+        color: ${defaultTheme.textColorInverted}
+
+        &:hover {
+            background-color: ${defaultTheme.status.successColorHover};
+            
+        }
+
+        &:active {
+            background-color: ${defaultTheme.status.successColorActive};
+        }
+
+    `,
 }
 
 const Button = styled.button`
@@ -72,7 +87,7 @@ export const PrimaryButton = styled(Button)`
         cursor: not-allowed;
     }
 
-    ${applyStyleModifiers(BUTTON_MODIFERS)}
+    ${applyStyleModifiers(BUTTON_MODIFIERS)}
 
 `;
 
@@ -93,7 +108,7 @@ export const SecondaryButton = styled(Button)`
         cursor: not-allowed;
     }
 
-    ${applyStyleModifiers(BUTTON_MODIFERS)}
+    ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `
 
 
