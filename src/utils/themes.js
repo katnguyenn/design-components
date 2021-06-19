@@ -5,6 +5,7 @@ export const defaultTheme = {
     primaryColorHover: blue[200],
     primaryColorActive: blue[100],
     secondaryColor: orange[200],
+    secondaryColorHover: orange[300],
     textColorOnPrimary: neutral[100],
     textColor: neutral[400],
     textColorInverted: neutral[300],
